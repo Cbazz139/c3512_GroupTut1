@@ -17,14 +17,16 @@ function outputPostRow(
     $post_excerpt) {
     
     // image 
-    echo "<img src='images/". $post_thumb . "'>";
+    echo generateLink($post_link, "<img src='images/". $post_thumb . "'>");
+    // echo "<img src='images/". $post_thumb . "'>";
 
     
     // title 
     echo "<h2>". $post_title . "</h2>";
 
     // "Posted by" username and date
-    echo "<p>Posted by <a href='". $post_userLink ."'>". $post_userName ."</a> ". $post_date ."</p>";
+    echo "<p>Posted by ". generateLink($post_userLink, $post_userName) ." ". $post_date ."</p>";
+    // echo "<p>Posted by <a href='". $post_userLink ."'>". $post_userName ."</a> ". $post_date ."</p>";
     
     // starOutput() and numbers/sum of reviews
     echo "<p>";
