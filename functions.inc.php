@@ -1,8 +1,6 @@
 <?php
 require 'data.inc.php';
 
-$numbers = [0, 1, 2, 3, 4, 5];
-
 function generateLink($url, $label) {
     echo '<a href="'. $url . '">' . $label .'</a>';
 }
@@ -20,26 +18,35 @@ function outputPostRow(
     
     // image 
     echo "<img src='images/". $post_thumb . "'>";
+
     
     // title 
     echo "<h2>". $post_title . "</h2>";
 
     // "Posted by" username and date
-    echo "<p>Posted by <a href='". $post_userLink ."'>". $post_userName ."</a>". $post_date ."</p>";
+    echo "<p>Posted by <a href='". $post_userLink ."'>". $post_userName ."</a> ". $post_date ."</p>";
     
     // starOutput() and numbers/sum of reviews
-
-    echo " <p>(" . $post_reviewsNum . " reviews)</p";
+    echo "<p>";
+    echo starOutput($post_reviewsRating) . " " . $post_reviewsNum . " Reviews</p>";
     
     // description/excerpt
     echo "<p>". $post_excerpt ."</p>";
     
     // "Read more" link
     generateLink($post_link, "Read more");
+
     
 }
 
 function starOutput($post_reviewsRating) {
-    
 
+    for ($i = 1; $i <= 5; $i++) {
+        if ($i <= $post_reviewsRating) {
+            echo "<img src='images/star-gold.svg' width=16px; height=auto;>";
+        } else {
+            echo "<img src='images/star-outline.svg' width=16px; height=auto;>";
+        }
+    }
 }
+
