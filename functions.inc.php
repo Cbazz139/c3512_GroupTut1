@@ -1,4 +1,6 @@
 <?php
+require 'data.inc.php';
+
 $numbers = [0, 1, 2, 3, 4, 5];
 
 function generateLink($url, $label) {

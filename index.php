@@ -14,12 +14,17 @@
                 <div>
 
                     <!-- replace each of these rows with a function call -->
-                     <!--first row--> 
+                    <!--first row--> 
+                    <?= "" ?>
+                    <br>
                   
                     <!--second row-->
+                    <?= "" ?>
+                    <br>
                 
                     <!--third row-->
-                 
+                    <?= "" ?>
+                    <br>
 
                 </div>  <!-- end post list -->
            
