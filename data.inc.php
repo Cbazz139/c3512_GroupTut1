@@ -1,4 +1,4 @@
-//<?php
+<?php
   // info for post 1
   $post1_postLink = "postlink1.php";
   $post1_userName = "Leonie Kohler";

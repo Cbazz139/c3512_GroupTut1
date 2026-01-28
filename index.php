@@ -1,9 +1,8 @@
 <!-- Sebastian Samaco 201711695 -->
 <!-- Lihini Herath 201721155 -->
-<?php 
-include "functions.inc.php";
-include "data.inc.php";
-?>
+
+<?php include __DIR__ . "/functions.inc.php";
+include __DIR__ . "/data.inc.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
